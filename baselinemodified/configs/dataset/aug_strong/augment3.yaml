@@ -5,11 +5,11 @@ transforms:
   - _target_: torchvision.transforms.RandomGrayscale
     p: 0.3
   - _target_: torchvision.transforms.RandomAutocontrast
-    p: 0.6
+    p: 0.7
   - _target_: torchvision.transforms.RandomSolarize
-    p: 0.5
+    p: 0.7
   - _target_: torchvision.transforms.RandomPosterize
-    p: 0.6
+    p: 0.7
   - _target_: torchvision.transforms.RandomAdjustSharpness
     p: 0.6
     sharpness_factor: 2
@@ -20,7 +20,7 @@ transforms:
       contrast: 0.8
       saturation: 0.8
       hue: 0.2
-    p: 0.5
+    p: 0.8
   - _target_: torchvision.transforms.RandomApply
     transforms:
       - _target_: torchvision.transforms.GaussianBlur
