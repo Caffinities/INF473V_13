@@ -3,8 +3,8 @@ defaults:
   - test_transform: simple
   - aug_transform: augment1
 num_classes: 48
-batch_size: 128
-num_workers: 8
+batch_size: 1024
+num_workers: 6
 train_path: ${data_dir}/train
 test_path: ${data_dir}/test
 unlabelled_path: ${data_dir}/unlabelled
