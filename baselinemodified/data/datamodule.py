@@ -76,16 +76,16 @@ class DataModule:
     ):
         self.dataset = ImageFolder(train_dataset_path, transform=train_transform)
         
-        '''self.train_dataset, self.val_dataset = torch.utils.data.random_split(
+        self.train_dataset, self.val_dataset = torch.utils.data.random_split(
             self.dataset,
             [
-                int(0.8 * len(self.dataset)),
-                len(self.dataset) - int(0.8 * len(self.dataset)),
+                int(0.9 * len(self.dataset)),
+                len(self.dataset) - int(0.9 * len(self.dataset)),
             ],
             generator=torch.Generator().manual_seed(3407),
-        )'''
-        self.train_dataset = self.dataset
-        self.val_dataset = self.dataset
+        )
+        '''self.train_dataset = self.dataset
+        self.val_dataset = self.dataset'''
         self.aug_transform = aug_transform
         self.val_dataset.transform = val_transform
         self.batch_size = batch_size
