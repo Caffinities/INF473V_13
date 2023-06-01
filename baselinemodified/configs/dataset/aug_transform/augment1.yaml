@@ -2,5 +2,5 @@ _target_: torchvision.transforms.Compose
 transforms:
   - _target_: torchvision.transforms.RandomHorizontalFlip
   - _target_: torchvision.transforms.RandomVerticalFlip
-  - _target_: torchvision.transforms.RandomRotation
-    degrees: 10
+  - _target_: torchvision.transforms.RandomResizedCrop
+    size: 224
