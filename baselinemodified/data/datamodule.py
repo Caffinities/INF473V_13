@@ -79,8 +79,8 @@ class DataModule:
         self.train_dataset, self.val_dataset = torch.utils.data.random_split(
             self.dataset,
             [
-                int(0.8 * len(self.dataset)),
-                len(self.dataset) - int(0.8 * len(self.dataset)),
+                int(0.9 * len(self.dataset)),
+                len(self.dataset) - int(0.9 * len(self.dataset)),
             ],
             generator=torch.Generator().manual_seed(3407),
         )
