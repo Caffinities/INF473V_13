@@ -85,7 +85,7 @@ class DataModule:
             generator=torch.Generator().manual_seed(3407),
         )'''
         self.train_dataset = self.dataset
-        self.test_dataset = self.dataset
+        self.val_dataset = self.dataset
         self.aug_transform = aug_transform
         self.val_dataset.transform = val_transform
         self.batch_size = batch_size
