@@ -2,6 +2,8 @@ _target_: torchvision.transforms.Compose
 transforms:
   - _target_: torchvision.transforms.RandomHorizontalFlip
   - _target_: torchvision.transforms.RandomVerticalFlip
+  - _target_: torchvision.transforms.RandomRotation
+    degrees: 30
   - _target_: torchvision.transforms.RandomGrayscale
     p: 0.4
   - _target_: torchvision.transforms.RandomAutocontrast
