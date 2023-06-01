@@ -1,18 +1,20 @@
 defaults:
   - _self_
-  - model: resnet
+  - model: resnext
   - dataset: 48_classes_supervised
-  - optim: adamw
+  - optim: SGD
   - loss_fn: cross_entropy
 
-epochs: 40
+epochs: 200
 
 datamodule:
   _target_: data.datamodule.DataModule
   train_dataset_path: ${dataset.train_path}
+  unlabelled_dataset_path: ${dataset.unlabelled_path}
   train_transform: ${dataset.train_transform}
   val_transform: ${dataset.test_transform}
   aug_transform: ${dataset.aug_transform}
+  aug_transform_strong: ${dataset.aug_transform}
   batch_size: ${dataset.batch_size}
   num_workers: ${dataset.num_workers}
 
@@ -25,3 +27,13 @@ hydra:
     dir: outputs/${hydra.job.name}/${now:%Y-%m-%d_%H-%M-%S}/
   job:
     chdir: true
+
+T1 : 1
+T2 : 1
+af : 1
+unlabelled_total : 5000
+confidence: 0.95
+
+holes: 2
+cutoutlength: 30
+loss_counter: 1

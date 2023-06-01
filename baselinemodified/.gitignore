@@ -1,7 +1,10 @@
 split_dataset.py
 wandb
-outputs
+/outputs
 /dataset
 challenge_subset
 create_test.py
 /dataset.zip
+submission.csv
+checkpoints
+.DS_Store

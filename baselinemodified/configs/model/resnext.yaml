@@ -1,0 +1,3 @@
+_target_: models.resnext.ResNext
+num_classes: ${dataset.num_classes}
+frozen: False

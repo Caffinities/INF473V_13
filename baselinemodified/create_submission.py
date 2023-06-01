@@ -39,10 +39,10 @@ def create_submission(cfg):
     )
     # Load model and checkpoint
     model = hydra.utils.instantiate(cfg.model).to(device)
-    checkpoint = torch.load(cfg.checkpoint_path)
+    checkpoint = torch.load(cfg.checkpoint_path, map_location=device)
     model.load_state_dict(checkpoint)
     class_names = sorted(os.listdir(cfg.dataset.train_path))
-
+    print(class_names, len(class_names))
     # Create submission.csv
     submission = pd.DataFrame(columns=["id", "label"])
 

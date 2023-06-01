@@ -1,4 +1,5 @@
 _partial_: true
 _target_: torch.nn.functional.cross_entropy
-reduction: mean
+reduction: none
+ignore_index: -1
 label_smoothing: 0.05
