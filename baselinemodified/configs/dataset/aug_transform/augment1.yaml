@@ -4,4 +4,6 @@ transforms:
   - _target_: torchvision.transforms.RandomVerticalFlip
   - _target_: torchvision.transforms.RandomResizedCrop
     size: 224
-    scale: (0.8,1)
+    scale:
+      - 0.8
+      - 1.0
