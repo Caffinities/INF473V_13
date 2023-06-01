@@ -39,7 +39,7 @@ def train(cfg):
     T = torch.tensor([cfg.confidence]*cfg.dataset.num_classes).to(device)
     beta = torch.tensor([0.0]*cfg.dataset.num_classes).to(device)
     sigma = torch.tensor([0.0]*cfg.dataset.num_classes).to(device)
-    M = lambda x: x/(2-x)
+    M = lambda x: x**2/2 + 1/2
 
     #threshold function
     def unlabelweight(epoch):
