@@ -31,9 +31,9 @@ hydra:
 T1 : 1
 T2 : 1
 af : 1
-unlabelled_total : 20000
+unlabelled_total : 6000
 confidence: 0.95
 
 holes: 2
 cutoutlength: 30
-loss_counter: 2
+loss_counter: 1
